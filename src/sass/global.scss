@@ -1,0 +1,131 @@
+@font-face {
+  font-family: Nixie One;
+  font-weight: normal;
+  src: url('assets/NixieOne.ttf');
+}
+
+@include keyframes(fadeIn) {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+html {
+  font-family: Nixie One;
+  color: $black;
+
+  background: $white;
+}
+
+a {
+  color: $black;
+}
+
+body {
+  width: 90%;
+  margin: 0 auto;
+}
+
+section {
+  width: 90%;
+  margin-top: 17em;
+  margin: 0 auto;
+
+  ul {
+    list-style: none;
+  }
+
+}
+
+#loader {
+  width: 200px;
+  height: 200px;
+
+  margin: 0 auto;
+}
+
+#imagesContent {
+  padding-bottom: 1em;
+
+  li img {
+    @include animation(fadeIn .5s ease-in-out);
+    width: 100%;
+  }
+
+}
+
+footer {
+  width: 90%;
+  z-index: 1;
+  text-align: center;
+  font-size: 0.8em;
+  margin: 0 auto;
+  padding: .5em;
+
+  a {
+    text-decoration: none;
+  }
+
+}
+
+@media screen and (min-width: 680px) {
+
+  body {
+    width: 100%;
+  }
+
+  section {
+    @include calc(height, '100% - 5rem');
+    width: 75%;
+
+    position: relative;
+
+    float: right;
+
+    padding-top: 5em;
+  }
+
+  #loader {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    margin: auto;
+  }
+
+  #imagesContent {
+    padding-bottom: 0;
+
+    li {
+      position: relative;
+      display: table-cell;
+      vertical-align: top;
+      height: 60%;
+
+      img {
+        height: 500px;
+        width: auto;
+        margin: 0 .25em;
+      }
+    }
+  }
+
+  h1 {
+    font-size: 1.2em;
+    margin-bottom: .5em;
+    position: fixed;
+    right: .8em;
+    padding-top: .5em;
+  }
+
+  footer {
+    position: fixed;
+    bottom: .6em;
+  }
+
+}

@@ -1,0 +1,52 @@
+header {
+  padding: 1em;
+
+  background: $white;
+
+  z-index: 1;
+
+  img {
+    width: 100%;
+    cursor: pointer;
+  }
+}
+
+nav {
+  margin-top: 1.5em;
+  padding: 0 .5em;
+
+  li {
+    @include animation(fadeIn .5s ease-in-out);
+    font-size: 1.2em;
+    list-style: none;
+    margin: 0 .3em .6em;
+    cursor: pointer;
+
+    &:hover span {
+      border-bottom: 1px solid $black;
+    }
+
+    &.current span {
+      border-bottom: 2px solid $black;
+    }
+
+    span {
+      border-bottom: 2px solid transparent;
+    }
+
+  }
+
+}
+
+@media screen and (min-width: 680px) {
+
+  header {
+    @include calc(width, '25% - 2em');
+    height: 100%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+}

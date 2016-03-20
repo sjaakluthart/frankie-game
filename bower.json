@@ -1,0 +1,23 @@
+{
+  "name": "frankie-game",
+  "description": "simple click game",
+  "main": "src/assets/app.jsx",
+  "authors": [
+    "Sjaak Luthart <mail@sjaakluthart.nl>"
+  ],
+  "license": "CC-BY-NC-SA-4.0",
+  "homepage": "https://github.com/sjaakluthart/frankie-game",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "routie": "^0.3.2",
+    "jquery": "^2.2.0"
+  }
+}
