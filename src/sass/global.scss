@@ -85,7 +85,8 @@ section {
 img {
   @include fadeIn($duration: 1s);
   display: block;
-  width: 50%;
+  width: auto;
+  max-height: 50vh;
 
   margin: 0 auto;
 }
