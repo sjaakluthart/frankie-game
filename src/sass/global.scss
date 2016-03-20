@@ -39,15 +39,15 @@ section {
 
 .start {
   p {
-    padding: 4rem 0;
+    padding: 2rem 0;
 
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-align: center;
 
     &:nth-of-type(3) {
       @include fadeIn($duration: 2s, $delay: 4s);
 
-      padding-top:  0;
+      padding-top: 0;
 
       cursor: pointer;
     }
@@ -83,7 +83,6 @@ section {
 }
 
 img {
-  @include fadeIn($duration: 1s);
   display: block;
   width: auto;
   max-height: 50vh;
@@ -112,7 +111,7 @@ img {
   @include transition(font-size .5s ease-in-out);
 
   &:hover {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 }
 
@@ -162,6 +161,10 @@ img {
 
   div {
     overflow: auto;
+  }
+
+  img {
+    @include fadeIn($duration: 1s);
   }
 
   p {
