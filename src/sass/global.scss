@@ -1,7 +1,7 @@
 @font-face {
-  font-family: Nixie One;
+  font-family: The Minion;
   font-weight: normal;
-  src: url('assets/NixieOne.ttf');
+  src: url('assets/theminion.otf');
 }
 
 @include keyframes(fadeIn) {
@@ -14,10 +14,8 @@
 }
 
 html {
-  font-family: Nixie One;
+  font-family: The Minion;
   color: $black;
-
-  background: $white;
 }
 
 a {
@@ -29,103 +27,168 @@ body {
   margin: 0 auto;
 }
 
+main {
+  height: 100vh;
+}
+
 section {
-  width: 90%;
-  margin-top: 17em;
-  margin: 0 auto;
-
-  ul {
-    list-style: none;
-  }
-
+  @include transform(translateY(-50%));
+  position: relative;
+  top: 50%;
 }
 
-#loader {
-  width: 200px;
-  height: 200px;
+.start {
+  p {
+    padding: 4rem 0;
 
-  margin: 0 auto;
-}
+    font-size: 3rem;
+    text-align: center;
 
-#imagesContent {
-  padding-bottom: 1em;
+    &:nth-of-type(3) {
+      @include fadeIn($duration: 2s, $delay: 4s);
 
-  li img {
-    @include animation(fadeIn .5s ease-in-out);
-    width: 100%;
-  }
+      padding-top:  0;
 
-}
-
-footer {
-  width: 90%;
-  z-index: 1;
-  text-align: center;
-  font-size: 0.8em;
-  margin: 0 auto;
-  padding: .5em;
-
-  a {
-    text-decoration: none;
-  }
-
-}
-
-@media screen and (min-width: 680px) {
-
-  body {
-    width: 100%;
-  }
-
-  section {
-    @include calc(height, '100% - 5rem');
-    width: 75%;
-
-    position: relative;
-
-    float: right;
-
-    padding-top: 5em;
-  }
-
-  #loader {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-
-    margin: auto;
-  }
-
-  #imagesContent {
-    padding-bottom: 0;
-
-    li {
-      position: relative;
-      display: table-cell;
-      vertical-align: top;
-      height: 60%;
-
-      img {
-        height: 500px;
-        width: auto;
-        margin: 0 .25em;
-      }
+      cursor: pointer;
     }
   }
 
-  h1 {
-    font-size: 1.2em;
-    margin-bottom: .5em;
-    position: fixed;
-    right: .8em;
-    padding-top: .5em;
+  span {
+    display: inline-block;
+
+    margin: 0 1rem;
+
+    @include fadeIn($duration: 2s);
+
+    &.start2 {
+      @include fadeIn($duration: 1s, $delay: 1s);
+    }
+
+    &.start3 {
+      @include fadeIn($duration: 1s, $delay: 2s);
+    }
+
+    &.start4 {
+      @include fadeIn($duration: 1s, $delay: 3s);
+    }
+
+    &.left {
+      margin-left: 10rem;
+    }
+
+    &.right {
+      margin-right: 10rem;
+    }
+  }
+}
+
+img {
+  @include fadeIn($duration: 1s);
+  display: block;
+  width: 50%;
+
+  margin: 0 auto;
+}
+
+.left {
+  margin-left: 5rem;
+
+  float: left;
+
+  cursor: pointer;
+}
+
+.right {
+  margin-right: 5rem;
+
+  float: right;
+
+  cursor: pointer;
+}
+
+.left,
+.right {
+  @include transition(font-size .5s ease-in-out);
+
+  &:hover {
+    font-size: 3.5rem;
+  }
+}
+
+.mud {
+  p {
+    padding: 3rem;
+
+    font-size: 3.5rem;
+    text-align: center;
+
+    span {
+      @include fadeIn($duration: 2s);
+      display: inline-block;
+
+      margin: 0 2rem;
+
+      &.oink1 {
+        @include transform(rotate(-25deg));
+      }
+
+      &.oink2 {
+        @include transform(rotate(-5deg));
+        @include fadeIn($duration: 1s, $delay: 1s);
+      }
+
+      &.oink3 {
+        @include transform(rotate(25deg));
+        @include fadeIn($duration: 1s, $delay: 2s);
+      }
+    }
+  }
+}
+
+.bacon {
+  .hook {
+    @include bounceInLeft($duration: 1s);
+    width: auto;
+    height: 90%;
   }
 
-  footer {
-    position: fixed;
-    bottom: .6em;
+  .knife {
+    @include rotateInDownLeft($duration: 1s, $delay: 1s);
+    width: 35%;
+    position: absolute;
+    left: 0;
   }
 
+  div {
+    overflow: auto;
+  }
+
+  .strip {
+    @include fadeIn($duration: 2s);
+    display: block;
+
+    width: 33.3%;
+
+    margin: 0 auto;
+
+    float: left;
+
+    &:nth-of-type(2) {
+      @include fadeIn($duration: 1s, $delay: 1s);
+    }
+
+    &:nth-of-type(3) {
+      @include fadeIn($duration: 1s, $delay: 2s);
+    }
+  }
+
+  p {
+    @include fadeIn($delay: 3s);
+    padding: 2rem;
+
+    clear: both;
+    
+    font-size: 3rem;
+    text-align: center;
+  }
 }
