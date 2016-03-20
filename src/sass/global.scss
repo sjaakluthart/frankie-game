@@ -163,32 +163,14 @@ img {
     overflow: auto;
   }
 
-  .strip {
-    @include fadeIn($duration: 2s);
-    display: block;
-
-    width: 33.3%;
-
-    margin: 0 auto;
-
-    float: left;
-
-    &:nth-of-type(2) {
-      @include fadeIn($duration: 1s, $delay: 1s);
-    }
-
-    &:nth-of-type(3) {
-      @include fadeIn($duration: 1s, $delay: 2s);
-    }
-  }
-
   p {
-    @include fadeIn($delay: 3s);
-    padding: 2rem;
+    @include fadeIn($delay: 1s);
+    @include transform(translate(-50%, -50%));
+    position: absolute;
+    top: 50%;
+    left: 50%;
 
-    clear: both;
-    
-    font-size: 3rem;
+    font-size: 7rem;
     text-align: center;
   }
 }
