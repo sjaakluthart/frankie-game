@@ -1,6 +1,5 @@
-# portfolio-marieke
+# Frankie Game
 
-Portfolio website for my sister who studies Illustration at the Hogeschool van de Kunsten in Utrecht, the Netherlands. The content on the website is loaded from the flickr api using AJAX. I've made this version of the website to experiment with React, Bower, Browserify and Gulp.
 
 Requirements:
 * [Node.js](https://nodejs.org/en/)
@@ -11,7 +10,7 @@ Requirements:
 
 Clone the repo with git:
 ```
-git clone git@github.com:sjaakluthart/portfolio-marieke.git
+git clone git@github.com:sjaakluthart/frankie-game.git
 ```
 
 ### Installation
@@ -35,17 +34,6 @@ Add the settings file to the root directory, this is used by Gulp for deploying 
     "user": "MY.FTP.ACCOUNT",
     "pass": "MY-PASSWORD",
     "remotePath": "MY/REMOTE/PATH"
-}
-```
-
-Add the secrets file to the React directory located at ./src/app/, this file contains my flickr API key, my sister's flickr userId and analytics id.
-
-*secrets.js*
-```
-secrets = {
-    key: 'MY_API_KEY',
-    userId: 'MY_USER_ID',
-    analytics: 'MY_ANALYTICS_ID'
 }
 ```
 
