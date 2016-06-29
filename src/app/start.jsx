@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const Start = React.createClass({
 
@@ -36,4 +36,4 @@ const Start = React.createClass({
   }
 });
 
-export {Start}
+export default Start;

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const Bacon = React.createClass({
 
@@ -29,4 +29,4 @@ const Bacon = React.createClass({
 
 });
 
-export {Bacon}
+export default Bacon;

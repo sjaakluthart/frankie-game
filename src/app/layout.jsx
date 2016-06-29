@@ -1,5 +1,5 @@
-import React from 'react'
-import {secrets} from './secrets.js'
+import React from 'react';
+import secrets from './secrets.js';
 
 const Layout = React.createClass({
 
@@ -26,4 +26,4 @@ const Layout = React.createClass({
 
 });
 
-export {Layout}
+export default Layout;
