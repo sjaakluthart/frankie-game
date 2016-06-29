@@ -10,7 +10,7 @@ class Walking extends React.Component {
   render() {
     return (
       <section>
-        <img src="/assets/lopen.gif" />
+        <img src="assets/lopen.gif" />
       </section>
     );
   }

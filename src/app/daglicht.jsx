@@ -3,7 +3,7 @@ import React from 'react';
 function Daglicht() {
   return (
     <section>
-      <img src="/assets/daglicht.gif" />
+      <img src="assets/daglicht.gif" />
       <a className="next" href="#spelen"><p>next</p></a>
     </section>
   );
